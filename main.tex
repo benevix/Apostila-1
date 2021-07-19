@@ -1,0 +1,132 @@
+\documentclass[11pt,reqno]{book}
+
+\input{structure.tex} % Aqui estão todas as bibliotecas e definições
+
+%---------------------------------------------------------------------
+% Início do Documento  
+\begin{document}
+
+\renewcommand{\contentsname}{Sumário}
+\renewcommand\indexname{Índice}
+
+
+%-----------------------------------------------------------------------
+%	CAPA
+%-----------------------------------------------------------------------
+
+% Entrar no arquivo "capa.tex" e modificar "Nome da Disciplina"
+
+\input{capa}
+
+
+%---------------------------------------------------------------------
+%	Página de Apresentação 
+%---------------------------------------------------------------------
+
+% Entrar no arquivo "aparesentacao.tex" e redigir o texto de apresentação da disciplina
+
+\cleardoublepage
+\newpage
+~\vfill
+\thispagestyle{empty}
+\doublespacing 
+\input{apresentacao}
+\vspace{3cm}
+\DTMlangsetup{showdayofmonth=false}
+\noindent \textit{1ª Ed., \today }
+\DTMlangsetup{showdayofmonth=true}
+
+%---------------------------------------------------------------------
+%	SUMÁRIO
+%---------------------------------------------------------------------
+
+% Não é necessário fazer modificação
+
+\chapterimage{capitulo.png}
+\pagestyle{empty}
+\tableofcontents
+\cleardoublepage
+\pagestyle{fancy}
+
+
+%-------------------------------------------------------------
+%	INSTRUÇÕES
+%-------------------------------------------------------------
+%
+% A partir deste ponto serão inseridos os capítulos da apostila através dos seguintes passos:
+% 
+% 1) Incluir um mini resumo de uma parte do documento com o comando "\parte{Nome da Parte}". (Opcional)
+% 2) Adicionar uma nova pasta 
+% 2) Incluir um capítulo com o comando "\input{"Caminho do Capítulo"}. Ex.: Caso queira incluir o capítulo 1 inserir o comando "\input{Capitulo 1/capitulo}".
+% 
+%-------------------------------------------------------------
+%	DIVISÃO POR PARTES
+%-------------------------------------------------------------
+
+\parte{Parte Um}  % Comente essa linha (ctrl+/) se não quiser dividir a apostila em partes
+\input{Capitulo 1/capitulo1} % Adiciona  capítulo na parte 1. Para escrever o capítulo 1, abra o arquivo "/Capitulo 1/capitulo1.tex". O mesmo raciocínio vale para os demais.
+\input{Capitulo 2/capitulo2}
+
+
+\parte{Parte Dois}  % Comente essa linha (ctrl+/) se não quiser dividir a apostila em partes
+\input{Capitulo 3/capitulo3} % Adicionar  capítulo na parte 2
+%\input{Capitulo 4/capitulo4}
+
+% Capítulo com exemplos de comandos, comente quando quiser esconder no seu texto
+\input{capitulo exemplos/exemplos} 
+
+%-----------------------------------------------------------------
+%	BIBLIOGRAFIA
+%-----------------------------------------------------------------
+
+\capitulo*{Bibliografia}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliografia}} \nocite{*}
+% Adiciona a Bibliografia para o Sumário
+
+%------------------------------------------------
+%   Artigos
+%------------------------------------------------
+
+\secao*{Artigos}
+\addcontentsline{toc}{section}{Artigos}
+\printbibliography[heading=bibempty,type=article]
+
+%------------------------------------------------
+%   Livros
+%------------------------------------------------
+
+\secao*{Livros}
+\addcontentsline{toc}{section}{Livros}
+\printbibliography[heading=bibempty,type=book]
+
+%------------------------------------------------
+%   Manuais
+%------------------------------------------------
+
+\secao*{Manuais}
+\addcontentsline{toc}{section}{Manuais}
+\printbibliography[heading=bibempty,type=manual]
+
+%------------------------------------------------
+%   Sites
+%------------------------------------------------
+
+\secao*{Sites}
+\addcontentsline{toc}{section}{Sites}
+\printbibliography[heading=bibempty,type=misc]
+
+
+%---------------------------------------------------------------
+%	ÍNDICE
+%---------------------------------------------------------------
+
+\cleardoublepage 
+\phantomsection
+\setlength{\columnsep}{0.75cm} 
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Índice}} 
+\printindex 
+%---------------------------------------------------------------
+
+\end{document}
+
+%Fim do Documento 

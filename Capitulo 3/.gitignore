@@ -1,0 +1,13 @@
+*.aux
+*.bbl
+*.bcf
+*.fdb_latcxmk
+*.fls
+*.i*
+*.log
+*.ptc
+*.s*
+*.toc
+*.run*
+*blg
+main.run.xml

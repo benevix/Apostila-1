@@ -1,0 +1,527 @@
+%--------------------------------------------------------------
+%  Capítulos e seções
+%--------------------------------------------------------------
+%
+% Um capítulo se inicia com o seguinte comando "\capitulo{Título}."
+%
+% Uma seção se inicia com o seguinte comando "\secao{Título da Seção}". Caso queira adicionar a seção ao índice acrescente o comando "\index{Título da Seção}. 
+%
+% O mesmo princípio é utilizado para os subníveis da seção. São eles: subseção e subsubseção, dados pelos comandos "\subsecao{Título}" e "\subsubsecao{Título}". Estes podem ser seguidos ou não do comando "\index{Título}"
+%
+%--------------------------------------------------------------
+
+
+
+% Título do capítulo
+\capitulo{Exemplos}
+
+
+  Aqui fica o texto introdutório do capítulo.
+  Este é o texto de um capítulo.
+
+    % título da seção
+    \secao{titulo da seção}\index{Palavra-chave}
+ 
+        Escreva o texto da seção aqui. 
+    
+    
+        % título da subseção
+        \subsecao{titulo da subseção}
+                
+                Texto da seção.
+        
+                % título da subsubseção
+                \subsubsecao{titulo da subseção}\index{palavra-chave(seção)!palavra-chave} 
+
+                    Texto da subsubseção.
+
+%--------------------------------------------------------------
+%   Teoremas
+%--------------------------------------------------------------
+
+
+    \secao{Teoremas}\index{Teoremas}
+
+        Esta seção traz exemplos de teoremas.
+
+        \subsecao{Várias Equações}\index{Teoremas!Várias Equações}
+
+            Exemplo de Teorema com várias equações.
+
+            \begin{theorem}[Nome do teorema]
+                In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
+                \begin{align}
+                    & \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+                    &  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+                \end{align}
+            \end{theorem}
+
+        \subsecao{Linha Única}\index{Teoremas!Linha Única}
+            Teorema em Linha Única.
+            \begin{theorem}
+                A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
+            \end{theorem}
+
+%--------------------------------------------------------------
+
+
+%--------------------------------------------------------------
+%   Definições
+%--------------------------------------------------------------
+\secao{Definições}\index{Definições}
+
+    Exemplo de Definição.
+    \begin{definition}[Nova Definição]
+        Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
+        \begin{align}
+            & ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
+            & ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
+            & ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
+        \end{align}
+    \end{definition}
+
+%--------------------------------------------------------------
+
+%--------------------------------------------------------------
+%   Notações
+%--------------------------------------------------------------
+\secao{Notações}\index{Notações}
+
+    \begin{notation}
+        Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
+        \begin{enumerate}
+            \item Bounded support $G$;
+            \item Infinitely differentiable;
+        \end{enumerate}
+        a vector space is denoted by $\mathcal{D}(G)$. 
+    \end{notation}
+
+%--------------------------------------------------------------
+
+
+
+%--------------------------------------------------------------
+%  Indicação de ícones
+%--------------------------------------------------------------
+    \secao{Indicação de Ícones}\index{Indicação de Ícones}
+
+        \mais{ Oferece novas informações que enriquecem o assunto ou “curiosidades” e notícias recentes relacionadas ao tema estudado. Não indicar simplesmente livros, filmes, links, etc. Oriente os estudantes sobre o que vão encontrar no material indicado.
+        }
+
+        \midia{ Sempre que se desejar que os estudantes desenvolvam atividades empregando diferentes mídias: vídeos, filmes, jornais, ambiente AVA, sites e outras.
+        }
+
+        \glossario{ Indica a definição de um termo, palavra ou expressão utilizada no texto.
+        }
+
+        \atividade{ Apresenta atividades em diferentes níveis de aprendizagem para que o estudante possa realizá-las e conferir o seu domínio do tema estudado.
+        }
+
+        \atencao{  Indica pontos de maior relevância no texto.
+       
+        o 
+        
+        quadro 
+       
+        aumenta automaticamente
+      
+        kkk
+        }
+
+%--------------------------------------------------------------
+
+
+%--------------------------------------------------------------
+%   Proposições
+%--------------------------------------------------------------
+    \secao{Proposições}\index{Proposições}
+
+    Estes são exemplos de proposição.
+    
+        \subsecao{Várias Equações}\index{Proposições!Várias Equações}
+            Exemplo com várias equações.
+            \begin{proposition}[Nome da Proposição]
+                It has the properties:
+                \begin{align}
+                    & \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+                    &  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+                \end{align}
+            \end{proposition}
+
+        \subsecao{Linha Única}\index{Proposições!Linha Única}
+            Exemplo em Linha única.
+            \begin{proposition} 
+                Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
+            \end{proposition}
+
+%--------------------------------------------------------------
+
+%--------------------------------------------------------------
+%   Equações 
+%--------------------------------------------------------------
+    \secao{Equações}\index{Equações}
+        Este é um exemplo de uma equação.
+        \begin{equation}
+            \cos^{2}{x} + \sin^{2}{x} = 1, \quad \forall x \in \mathbb{R}
+            \label{equ:1}
+        \end{equation}
+        
+        A equação \ref{equ:1} está referenciada.
+        
+        Caso não queira uma numeração para a equação:
+        \begin{equation*}
+            \cos^{2}{x} + \sin^{2}{x} = 1, \quad \forall x \in \mathbb{R}
+        \end{equation*}       
+        %Note a existência de funções como "\cos{}" e "sin{}" e não, simplismente escrito "cos()" e "sin()".
+        
+        Um conjunto de equações:
+        
+        \begin{equation}
+            f(x) = 
+            \begin{cases}
+                2x+1, \quad  x \leq 0 \\
+               x^2 +\frac{3}{2}x +\log{x},  \quad  x > 0
+            \end{cases}
+            \label{equ:2}
+        \end{equation}   
+        %Note como é criada uma fração com o comando "\frac{}{}"
+        
+  
+       \subsecao{Matrizes}\index{Equações!Matriz}
+        
+         Exemplo padrão % o símbolo "&" é o separador de colunas e o "\\" indica final de linha
+        
+        $ %Entrando no Modo matémático entre "$$"
+        \begin{bmatrix}
+            1 & 2 & 3\\
+            a & b & c
+        \end{bmatrix}
+        $
+            Exemplo de equação matricial.
+            \begin{equation}
+                \begin{bmatrix}
+                    Y_{1,1}\\ 
+                    \vdots \\   
+                    \vdots \\ 
+                    Y_{m,1}
+                \end{bmatrix}
+                =\begin{bmatrix}
+                    A_{1,1} & \ldots & \ldots & A_{1,n}\\ 
+                    \vdots & \ddots &  & \\   
+                    \vdots &  & \ddots  & \\ 
+                    A_{m,1}&  &  & A_{m,n}
+                \end{bmatrix}
+                .\begin{bmatrix}
+                    \mathbf{X_{1,1}} \\  %Negrito 
+                    \mathbf{\vdots} \\   
+                    \mathbf{\vdots} \\ 
+                    \mathbf{X_{m,1}}
+                \end{bmatrix}
+                +\begin{bmatrix}
+                    B_{1,1} \\ 
+                    \vdots \\   
+                    \vdots \\ 
+                    B_{m,1}
+                \end{bmatrix}
+            \end{equation}
+
+
+        Exemplos de outros modelos de matrizes 
+        \url{https://pt.overleaf.com/learn/latex/Matrices}
+      
+
+      
+
+%--------------------------------------------------------------
+%   Exemplos 
+%--------------------------------------------------------------
+    \secao{Exemplos}\index{Exemplos}
+
+        Este é um exemplo de exemplos.
+        
+        \subsecao{Equações e Texto}\index{Exemplos!Equações e Texto}
+            \begin{example}
+                Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+                \begin{equation}
+                    f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
+                    & 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
+                \end{equation}
+                The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
+            \end{example}
+        \subsecao{Parágrafo de Texto}\index{Exemplos!Parágrafo de Texto}
+            \begin{example}[Nome do Exemplo]
+                \lipsum[2]
+            \end{example}
+
+%--------------------------------------------------------------
+
+%--------------------------------------------------------------
+%   Exercícios
+%--------------------------------------------------------------
+    \secao{Exercícios}\index{Exercícios}
+
+        Exemplo de exercício.
+        \begin{exercise}
+            This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
+        \end{exercise}
+
+%--------------------------------------------------------------
+
+
+%--------------------------------------------------------------
+%   Problemas
+%--------------------------------------------------------------
+    \secao{Problemas}\index{Problemas}
+        \begin{problem}
+            Qual é o sentido do mundo?
+        \end{problem}
+
+%--------------------------------------------------------------
+
+
+
+%--------------------------------------------------------------
+%--------------------------------------------------------------
+%  Nota de rodapé
+%--------------------------------------------------------------
+ \secao{Nota de rodapé}\index{Rodapé}
+
+        Notas de rodapé são legais para informações extras\footnote{Exemplo de nota de rodapé}.
+
+
+%--------------------------------------------------------------
+%   Listas 
+%--------------------------------------------------------------
+    \secao{Listas}\index{Listas}
+
+        Listas são úteis para apresentar informção de maneira concisa e ordenada.
+
+        \subsecao{Lista Numerada}\index{Listas!Lista Numerada}
+
+            \begin{enumerate}
+                \item The first item
+                \item The second item
+                \item The third item
+            \end{enumerate}
+
+        \subsecao{Bolinhas}\index{Listas!Bullet Points}
+
+            \begin{itemize}
+                \item The first item
+                \item The second item
+                \item The third item
+            \end{itemize}
+
+Observação: tem como mudar de bolinha para outros símbolos, pergunte ao Rodolfo.
+
+\secao{Listas aninhadas1}\index{Listas!Lista Aninhada}
+
+\begin{enumerate}
+   \item topico 1
+     \begin{itemize}
+         \item subitem 1
+         \item subitem 2
+      \end{itemize}
+   \item topico 2
+       \begin{itemize}
+         \item subitem 1
+         \item subitem 2
+       \end{itemize}
+\end{enumerate}
+
+
+Outros exemplos de listas aqui \url{https://pt.overleaf.com/learn/latex/Lists}
+
+%--------------------------------------------------------------
+
+
+%--------------------------------------------------------------
+%   Tabelas
+%--------------------------------------------------------------
+    \secao{Tabelas}\index{Tabelas}
+
+        Para criar tabelas facilmente \href{https://www.tablesgenerator.com/}{\textbf{Clique Aqui}}
+
+        %% INÍCIO DA TABELA %%
+        \begin{table}[h]  %-- Início da Tabela
+            %-- Legenda e Referências --%%
+            \caption{Legenda Tabela}
+            \label{tab:exemplo}             % comando para permitir citar a tabela
+            \addcontentsline{toc}{table}{Tabela \ref{tab:exemplo}}
+
+            %-- Corpo da Tabela --%
+            \centering
+            \begin{tabular}{l l l}
+                \toprule
+                \textbf{tópico 1} & \textbf{Valor 2} & \textbf{Valor 3}\\
+                \midrule
+                A 1 & 0.0003262 & 0.562 \\
+                B 2 & 0.0015681 & 0.910 \\
+                C 3 & 0.0009271 & 0.296 \\
+                \bottomrule
+            \end{tabular}
+        \end{table}  %-- Fim da Tabela
+        %% FIM TABELA %%
+
+
+%---------------------------------------------------------------
+%   Citação de tabela 
+%---------------------------------------------------------------
+
+    Como referenciar à Tabela  \ref{tab:exemplo} no texto automaticamente.
+
+%--------------------------------------------------------------
+
+
+%--------------------------------------------------------------
+%  Figuras
+%--------------------------------------------------------------
+    \secao{Figuras}\index{Figuras}
+
+        Aqui será acrescentada uma figura.
+        % Para adicionar uma figura, copie o código abaixo e substitua o caminho "capitulo exemplos/Imagens/exemplo_figura.jpg" pelo nome da figura desejada, escolhendo-a nas opções que aparecerão. Outros formatos além do .jpg são suportados, na dúvida só testar.
+        %
+        % Caso queira modificar o tamanho da imagem, altere o valor "0.3" para o desejado. Este valor representa a porcentagem do espaço de uma linha.
+        %
+        % Para referenciá-la no texto, dê um nome único para o argumento "fig:ref" do comando \label{}, por ex.: \label{fig:motor1.jpg}
+
+        \begin{figure}[htbp!]
+            \centering
+            \includegraphics[width=0.3\textwidth]{capitulo exemplos/Imagens/exemplo_figura.jpg}
+            \caption{Legenda da Figura}
+            \label{fig:ref}
+        \end{figure}
+
+%--------------------------------------------------------------
+%   Citação de Figuras
+%--------------------------------------------------------------
+% O comando \ref{nome que esta no label} irá gerar o numero da figura automaticamente
+
+Como mostrado na Figura \ref{fig:ref}, ....
+
+
+%--------------------------------------------------------------
+
+
+
+%--------------------------------------------------------------
+% Figuras lado a lado
+%--------------------------------------------------------------
+        \subsecao{Figuras}\index{Figuras!Figuras lado a lado}
+            
+            Segue um exemplo de imagens lado a lado
+
+            %Caso deseje adicionar uma figura embaixo de outra, modifique o valor "0.4" na propriedade "width" do comando "\includegraphics", em ambas as figuras, para um valor maior.
+
+            \begin{figure}[H]
+                \centering
+                \subfigure[Legenda A]{
+                    \includegraphics[width=0.4\textwidth]{capitulo exemplos/Imagens/exemplo_figura.jpg}
+                    \label{fig:ref1}
+                }
+                \hfill
+                \subfigure[Legenda B]{
+                    \includegraphics[width=0.4\textwidth]{capitulo exemplos/Imagens/exemplo_figura.jpg}
+                    \label{fig:ref2}
+                }
+                \caption{Legenda das duas Figuras}
+                \label{fig:ref3}
+            \end{figure}
+            
+            Apontando para as subfiguras \ref{fig:ref1} e \ref{fig:ref2} da imagem \ref{fig:ref3}.
+
+
+            Alterando o valor da propriedade "width" para "0.5", teremos o seguinte efeito:
+            \begin{figure}[H]
+                \centering
+                \subfigure[Legenda A]{
+                    \includegraphics[width=0.5\textwidth]{capitulo exemplos/Imagens/exemplo_figura.jpg}
+                    \label{fig:ref4}
+                }
+                \hfill
+                \subfigure[Legenda B]{
+                    \includegraphics[width=0.5\textwidth]{capitulo exemplos/Imagens/exemplo_figura.jpg}
+                    \label{fig:ref5}
+                }
+                \caption{Legenda das duas Figuras}
+                \label{fig:ref6}
+            \end{figure}      
+
+            Para 3 figuras:
+        
+            \begin{figure}[H]
+                \centering
+                \subfigure[Legenda A]{
+                    \includegraphics[width=0.3\textwidth]{capitulo exemplos/Imagens/exemplo_figura.jpg}
+                    \label{fig:ref7}
+                }
+                \hfill
+                \subfigure[Legenda B]{
+                    \includegraphics[width=0.3\textwidth]{capitulo exemplos/Imagens/exemplo_figura.jpg}
+                    \label{fig:ref8}
+                }
+                \hfill
+                \subfigure[Legenda C]{
+                    \includegraphics[width=0.3\textwidth]{capitulo exemplos/Imagens/exemplo_figura.jpg}
+                    \label{fig:ref9}
+                }
+                \caption{Legenda das duas Figuras}
+                \label{fig:ref10}
+            \end{figure}
+            
+            %   Lembre-se que o conteúdo nos comandos "\label{}" devem ser únicos para o referenciamento correto de cada imagem/subimagem.
+        
+%--------------------------------------------------------------
+% Citação de referência bibliográfica
+%--------------------------------------------------------------
+\secao{Citação de referência bibliográfica}\index{Referência}
+
+Segundo \cite{sobrenome_id}, é assim que cita uma referência no \LaTeX.
+
+
+%--------------------------------------------------------------
+% Citação de capítulo
+%--------------------------------------------------------------
+\secao{Citação de capítulo}\index{Citação de Capítulo}
+
+
+Citação do capítulo \ref{cap1} , capítulo \ref{cap3}, ...., é o mesmo esquema para imagens e tabelas.
+
+
+%--------------------------------------------------------------
+%   Corolários
+%--------------------------------------------------------------
+    \secao{Corolários}\index{Corolários}
+
+        Exemplo de Corolário
+        \begin{corollary}[Corollary name]
+            The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+        \end{corollary}
+
+%--------------------------------------------------------------
+
+
+
+%--------------------------------------------------------------
+%   Descrição
+%--------------------------------------------------------------
+
+        \subsecao{Descrição e Definições}\index{Listas!Descrição e Definições}
+
+            \begin{description}
+                \item[Name] Description
+                \item[Word] Definition
+                \item[Comment] Elaboration
+            \end{description}
+%--------------------------------------------------------------
+
+%--------------------------------------------------------------
+%   Vocabulário
+%--------------------------------------------------------------
+    \secao{Vocabulário}\index{Vocabulário}
+
+        Define a word to improve a students' vocabulary.
+
+        \begin{vocabulary}[Palavra]
+            Definição da palavra.
+        \end{vocabulary}

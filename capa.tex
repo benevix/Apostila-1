@@ -1,0 +1,16 @@
+\begingroup
+
+\thispagestyle{empty} % Sem Cabeçalho e Rodapé
+
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{Pictures/background.pdf}};
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\color{chapterhead}\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Nome da Disciplina\\[15pt] % Nome da Matéria
+{\Large Apostila Didática}\\[20pt]
+% {\huge Prof. Nome do Professor }
+}};
+\end{tikzpicture}
+
+\vfill
+
+\endgroup
+
